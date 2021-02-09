@@ -62,30 +62,35 @@ public class MusicStudioShop {
 
 		var addButton = new JButton("Add");
 		addButton.addActionListener(new MusicAddListener(this));
-		var historyButton = new JButton("History");
-		historyButton.addActionListener(new MusicHistoryListener(this));
+		
 		/*var statsButton = new JButton("Stats");
 		statsButton.addActionListener(new PBStatListener(this));*/
-		var exitButton = new JButton("Exit");
+		
+
 		var viewButton = new JButton("View Cart");
+		viewButton.addActionListener(new MusicHistoryListener(this));
 
-		JPanel buttonPanel = new JPanel();
-		southPanel.add(buttonPanel);
+		
 
-		buttonPanel.add(addButton);
-		buttonPanel.add(historyButton);
-		buttonPanel.add(viewButton);
-		//buttonPanel.add(statsButton);*/
-		buttonPanel.add(exitButton);
-
-		exitButton.addActionListener(e ->  {
+		viewButton.addActionListener(e ->  {
 			window.getContentPane().removeAll();
-			var menu = new MainMenu(window);
-			menu.init();
+			var ViewCart = new ViewCart(window, musicStudio);
+			ViewCart.init();
 			window.pack();
 			window.revalidate();
 		});
 
+		var exitButton = new JButton("Exit");
+          exitButton.addActionListener(e -> {
+			  var menu = new MainMenu(window);
+			  menu.init();
+		  });
+
+		JPanel buttonPanel = new JPanel();
+		southPanel.add(buttonPanel);
+		buttonPanel.add(addButton);
+		buttonPanel.add(viewButton);
+		buttonPanel.add(exitButton);
 		
 	}
 

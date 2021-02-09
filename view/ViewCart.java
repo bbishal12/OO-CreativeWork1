@@ -7,7 +7,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-//import controller.MusicAddListener;
+import controller.MusicHistoryListener;
 import model.MusicStudio;
 
 public class ViewCart {
@@ -40,7 +40,7 @@ public class ViewCart {
 		panel.add(userLabel);
 
 		JTextField userText = new JTextField(20);
-		userText.setBounds(100,100,170,20);
+		userText.setBounds(100,110,170,20);
 		panel.add(userText);
 
 		JLabel addressLabel = new JLabel("Address:");
@@ -48,16 +48,16 @@ public class ViewCart {
 		panel.add(addressLabel);
 
 		JTextField addressText = new JTextField(25);
-		addressText.setBounds(100,200,175,25);
+		addressText.setBounds(100,210,175,25);
 		panel.add(addressText);
 
 		JButton buyButton = new JButton("Buy");
 		buyButton.setBounds(10,360,85,30);
-		//buyButton.addActionListener(new MusicAddListener(this));
+		buyButton.addActionListener(new MusicHistoryListener(this));
 		panel.add(buyButton);
 		buyButton.addActionListener(e -> {
 		JOptionPane.showMessageDialog(frame,
-		"Items Purchased", "Thank you", 
+		"Items Purchased, Thank you!", "Message", 
 		JOptionPane.PLAIN_MESSAGE);
 		});
 

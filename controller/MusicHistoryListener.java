@@ -1,6 +1,7 @@
 package controller;
 
 import view.MusicStudioShop;
+import view.ViewCart;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -16,15 +17,19 @@ public class MusicHistoryListener implements ActionListener {
 		this.panel = panel;
 }
 
+	public MusicHistoryListener(ViewCart viewCart) {
+		
+	}
+
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		ArrayList<Music>history = panel.getMusicStudio().getMusicHistory();
+		ArrayList<Music>total = panel.getMusicStudio().getMusicHistory();
 		int index = 0;
 		String existingMessage = panel.getDisplay().getText();
 		String m = "";
 
-		if(history.size() > 0) {
-			for(var music: history) {
+		if(total.size() > 0) {
+			for(var music: total) {
 				m+= ++index + ". " + music + "\n";
 
 			}
