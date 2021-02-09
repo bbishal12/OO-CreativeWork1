@@ -40,7 +40,7 @@ public class ViewCart {
 		panel.add(userLabel);
 
 		JTextField userText = new JTextField(20);
-		userText.setBounds(100,110,170,20);
+		userText.setBounds(100,110,170,30);
 		panel.add(userText);
 
 		JLabel addressLabel = new JLabel("Address:");
@@ -57,7 +57,7 @@ public class ViewCart {
 		panel.add(buyButton);
 		buyButton.addActionListener(e -> {
 		JOptionPane.showMessageDialog(frame,
-		"Items Purchased, Thank you!", "Message", 
+		"Items Purchased.Thank you!", "Message", 
 		JOptionPane.PLAIN_MESSAGE);
 		});
 
