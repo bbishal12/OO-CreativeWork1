@@ -3,6 +3,7 @@ package controller;
 import model.Music;
 import view.MusicStudioShop;
 
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -39,7 +40,7 @@ public class MusicAddListener implements ActionListener {
 			var c = new Music(value);
 			panel.getMusicStudio().enter(c);
 			String m = panel.getDisplay().getText();
-			panel.getDisplay().setText(m+ "\nInserted: " + c + " | " + panel.getMusicStudio());
+			panel.getDisplay().setText(m+ "\nMusic Added: " + c + " | " + panel.getMusicStudio());
 
 
 	}

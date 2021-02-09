@@ -27,7 +27,7 @@ public class MusicStudioShop {
 
 	public MusicStudioShop(JFrame window) {
 		this.window = window;
-		window.setTitle("Music Studio Shoppingr");
+		window.setTitle("Music Studio Shopping");
 	}
 
 	public void init() {
@@ -43,7 +43,7 @@ public class MusicStudioShop {
 		southPanel.setLayout(new GridLayout(2,1));
 		cp.add(BorderLayout.SOUTH, southPanel);
 
-		radioButtons = new JRadioButton[3];
+		radioButtons = new JRadioButton[5];
 		radioButtons[0] = new JRadioButton(Music.A);
 		radioButtons[0].setSelected(true);
 		radioButtons[1] = new JRadioButton(Music.B);

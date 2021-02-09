@@ -24,14 +24,14 @@ public class MusicHistoryListener implements ActionListener {
 		String m = "";
 
 		if(history.size() > 0) {
-			for(var coin: history) {
-				m+= ++index + ". " + coin + "\n";
+			for(var music: history) {
+				m+= ++index + ". " + music + "\n";
 
 			}
-			panel.getDisplay().setText(existingMessage+ "\nCoin Insert History\n" + m);
+			panel.getDisplay().setText(existingMessage+ "\nMusic History\n" + m);
 
 		} else {
-			panel.getDisplay().setText(existingMessage+ "\n" + "No Coin Insert History\n");
+			panel.getDisplay().setText(existingMessage+ "\n" + "No Music selected History\n");
 		}
 	}
 		
